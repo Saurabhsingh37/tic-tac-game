@@ -1,2 +1,2 @@
 # tic-tac-game
-jay hind
+let's play the childhoods game .
