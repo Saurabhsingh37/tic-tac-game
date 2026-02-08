@@ -1,25 +1,26 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body{
+body {
     background-color: #548687;
     text-align: center;
 }
 
-.container{
-    height:70vmin;
+.container {
+    height: 70vmin;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-h1{
-    color: rgb(239, 146, 7);
 }
 
-.game{
+h1 {
+    color: rgb(239, 146, 7);
+    margin-top: 60px;
+}
+
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -27,11 +28,11 @@ h1{
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
-
+    /* cursor: pointer; */
 }
 
-.box{
-    height:18vmin ;
+.box {
+    height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
     border: none;
@@ -39,55 +40,98 @@ h1{
     font-size: 8vmin;
     color: brown;
     background-color: rgb(43, 91, 86);
-
+    cursor: pointer;
 }
-.resetbtn{
+
+.resetbtn,
+#newbtn {
+    padding: 10px 25px;
+    border-radius: 12px;
+    border: none;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+#newbtn {
     margin-top: 2rem;
     padding: 1rem;
     font-size: 1.25rem;
-    background-color:#3b3b0f ;
+    background-color: #272707;
     color: whitesmoke;
     border-radius: 1rem;
     border: none;
 }
 
-#newbtn{
-    margin-top: 2rem;
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color:#272707 ;
-    color: whitesmoke;
-    border-radius: 1rem;
-    border: none;
-
-}
-.hover:hover{
+#hover:hover {
     border: 2px solid white;
     box-shadow: 0 0 30px rgb(225, 16, 51);
-
 }
 
-#msg{
-    color: rgb(230, 131, 11);
+#msg {
+    color: rgb(255, 255, 255);
     font-size: 8vmin;
 }
 
-.msg-containar{
+.msg-containar {
     height: 80vmin;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
     gap: 4rem;
-
 }
 
-.hide{
+.hide {
     display: none;
 }
-h4{
+
+h4 {
     color: yellow;
     text-indent: 170vmin;
-    
 }
 
+.me {
+    padding: 10px;
+}
+
+/* ===== FULL PAGE CELEBRATION ===== */
+
+.celebrate {
+    animation: celebrateBG 6s linear infinite;
+}
+
+@keyframes celebrateBG {
+    0% {
+        background: linear-gradient(45deg, #8c5570, #c8a376);
+    }
+
+    25% {
+        background: linear-gradient(45deg, #4c98a0, #42946e);
+    }
+
+    50% {
+        background: linear-gradient(45deg, #b070b0, #5f5837);
+    }
+
+    75% {
+        background: linear-gradient(45deg, #3a5351, #9ad461);
+    }
+
+    100% {
+        background: linear-gradient(45deg, #29384a, #dbb88d);
+    }
+}
+
+/* Winner text animation */
+.msg-container {
+    transition: all 2s ease;
+}
+
+.msg-container.show {
+    transform: scale(1.2);
+}
